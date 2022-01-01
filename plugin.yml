@@ -1,0 +1,14 @@
+---
+name: Mathricle
+version: 0.0.1
+main: Mohahamed\Mathricle\Main
+api: 4.0.2
+
+commands:
+  text:
+    permission: text.use
+
+permissions:
+  text.use:
+    default: true
+...
