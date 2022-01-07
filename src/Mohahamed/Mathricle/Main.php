@@ -128,8 +128,8 @@ class Main extends PluginBase implements Listener {
         {
             $this->getScheduler()->scheduleDelayedTask(new ClosureTask(function () use ($player, $theta, $playerVec, $color){
                 if($theta != null){
-                    $cartesianCoords = $this->polarToCartesian( 10 + sin(2*pi()*$theta), $theta);
-                    $newVec = $playerVec->add($cartesianCoords->getX(), 0, $cartesianCoords->getY());
+                    $cartesianCoords = $this->polarToCartesian( 1.1*$theta, $theta);
+                    $newVec = $playerVec->add($cartesianCoords->getX(), $theta / 3, $cartesianCoords->getY());
                     $player->getWorld()->addParticle($newVec, new DustParticle($color));
                 }
             }), intval(40 + 2.5 * $theta));
